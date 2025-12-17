@@ -1,8 +1,23 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   reactCompiler: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "proxy.extractcss.dev",
+      },
+      {
+        protocol: "https",
+        hostname: "attio.com",
+      },
+      {
+        protocol: "https",
+        hostname: "a.storyblok.com",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
