@@ -1,1 +1,1 @@
-Holding page for ttOS
+ttOS - Technology transfer Operating System 
