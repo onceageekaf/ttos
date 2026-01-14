@@ -195,8 +195,8 @@ export default function GlobalPaperStandalonePage() {
 
         {/* Section 01: The Innovation Pipeline Is Broken */}
         <section className="mb-16">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="font-mono text-sm text-neutral-400">[ 01 ]</span>
+          <div className="flex items-center gap-3 mb-6 flex-wrap">
+            <span className="font-mono text-sm text-neutral-400 whitespace-nowrap">[ 01 ]</span>
             <h2 className="text-2xl font-medium tracking-tight text-neutral-900">The Innovation Pipeline Is Broken</h2>
           </div>
           <div className="space-y-6">
@@ -255,8 +255,8 @@ export default function GlobalPaperStandalonePage() {
 
         {/* Section 02: The Crisis Is Global */}
         <section className="mb-16">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="font-mono text-sm text-neutral-400">[ 02 ]</span>
+          <div className="flex items-center gap-3 mb-6 flex-wrap">
+            <span className="font-mono text-sm text-neutral-400 whitespace-nowrap">[ 02 ]</span>
             <h2 className="text-2xl font-medium tracking-tight text-neutral-900">The Crisis Is Global — and Unequal</h2>
           </div>
           <div className="space-y-6">
@@ -326,8 +326,8 @@ export default function GlobalPaperStandalonePage() {
 
         {/* Section 03: ttOS Solution */}
         <section className="mb-16">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="font-mono text-sm text-neutral-400">[ 03 ]</span>
+          <div className="flex items-center gap-3 mb-6 flex-wrap">
+            <span className="font-mono text-sm text-neutral-400 whitespace-nowrap">[ 03 ]</span>
             <h2 className="text-2xl font-medium tracking-tight text-neutral-900">
               ttOS: AI Infrastructure for Global Tech Transfer
             </h2>
@@ -344,12 +344,12 @@ export default function GlobalPaperStandalonePage() {
               <div className="space-y-6">
                 {/* Layer 1: Free AI Bots */}
                 <div className="bg-neutral-100 rounded-xl p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 rounded-lg bg-neutral-900 text-white flex items-center justify-center text-sm font-medium">
+                  <div className="flex items-center gap-3 mb-4 flex-wrap">
+                    <div className="w-8 h-8 flex-shrink-0 rounded-lg bg-neutral-900 text-white flex items-center justify-center text-sm font-medium">
                       1
                     </div>
                     <h4 className="font-medium text-neutral-900">Free AI Bots for Everyone</h4>
-                    <span className="text-xs bg-neutral-200 px-2 py-1 rounded-full text-neutral-500">
+                    <span className="text-xs bg-neutral-200 px-2 py-1 rounded-full text-neutral-500 whitespace-nowrap">
                       Global Access
                     </span>
                   </div>
@@ -370,12 +370,12 @@ export default function GlobalPaperStandalonePage() {
 
                 {/* Layer 2: Platform for Institutions */}
                 <div className="bg-neutral-100 rounded-xl p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 rounded-lg bg-neutral-900 text-white flex items-center justify-center text-sm font-medium">
+                  <div className="flex items-center gap-3 mb-4 flex-wrap">
+                    <div className="w-8 h-8 flex-shrink-0 rounded-lg bg-neutral-900 text-white flex items-center justify-center text-sm font-medium">
                       2
                     </div>
                     <h4 className="font-medium text-neutral-900">Platform for Institutions</h4>
-                    <span className="text-xs bg-neutral-200 px-2 py-1 rounded-full text-neutral-500">
+                    <span className="text-xs bg-neutral-200 px-2 py-1 rounded-full text-neutral-500 whitespace-nowrap">
                       Systemic Scale
                     </span>
                   </div>
@@ -413,8 +413,8 @@ export default function GlobalPaperStandalonePage() {
 
         {/* Section 04: Surfacing Hidden Innovation */}
         <section className="mb-16">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="font-mono text-sm text-neutral-400">[ 04 ]</span>
+          <div className="flex items-center gap-3 mb-6 flex-wrap">
+            <span className="font-mono text-sm text-neutral-400 whitespace-nowrap">[ 04 ]</span>
             <h2 className="text-2xl font-medium tracking-tight text-neutral-900">Surfacing Hidden Innovation</h2>
           </div>
           <div className="space-y-6">
@@ -481,8 +481,8 @@ export default function GlobalPaperStandalonePage() {
 
         {/* Section 05: Systemic Impact */}
         <section className="mb-16">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="font-mono text-sm text-neutral-400">[ 05 ]</span>
+          <div className="flex items-center gap-3 mb-6 flex-wrap">
+            <span className="font-mono text-sm text-neutral-400 whitespace-nowrap">[ 05 ]</span>
             <h2 className="text-2xl font-medium tracking-tight text-neutral-900">Potential for Systemic Impact</h2>
           </div>
           <div className="space-y-6">
@@ -513,8 +513,8 @@ export default function GlobalPaperStandalonePage() {
 
         {/* Section 06: The Opportunity */}
         <section className="mb-16">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="font-mono text-sm text-neutral-400">[ 06 ]</span>
+          <div className="flex items-center gap-3 mb-6 flex-wrap">
+            <span className="font-mono text-sm text-neutral-400 whitespace-nowrap">[ 06 ]</span>
             <h2 className="text-2xl font-medium tracking-tight text-neutral-900">The Opportunity for Partners</h2>
           </div>
           <div className="space-y-6">
