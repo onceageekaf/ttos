@@ -404,7 +404,7 @@ export default function GlobalPaperStandalonePage() {
                 <p className="text-sm text-neutral-500 mt-2">Available in any timezone</p>
               </div>
               <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-6 text-center">
-                <p className="text-3xl font-medium text-neutral-900">40+</p>
+                <p className="text-3xl font-medium text-neutral-900">10+</p>
                 <p className="text-sm text-neutral-500 mt-2">Languages supported</p>
               </div>
             </div>
