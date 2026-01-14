@@ -129,3 +129,16 @@
     @apply tracking-tight;
   }
 }
+
+/* Pitch scroll snap helpers */
+html { scroll-behavior: smooth; }
+.scroll-snap-y { scroll-snap-type: y mandatory; }
+.scroll-snap-start { scroll-snap-align: start; }
+
+/* Print mode */
+@media print {
+  html, body { height: auto !important; }
+  .no-print { display: none !important; }
+  section { break-after: page; page-break-after: always; }
+  a { text-decoration: none !important; }
+}
