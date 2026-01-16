@@ -144,7 +144,7 @@ export default function Page() {
             <p className="mt-3 leading-7 text-neutral-500">
               There's a lot of noise in this space. Most of it clusters around the same themes: spin-outs don't happen efficiently, processes are slow, and everyone has an opinion about greed vs speed.
             </p>
-            <p className="mt-3 leading-7 text-neutral-500">
+            <p className="mt-3 mb-3 leading-7 text-neutral-500">
               This piece is my attempt to do two things:
             </p>
             <ol className="list-decimal pl-6 text-neutral-500 leading-7 space-y-2">
@@ -179,7 +179,7 @@ export default function Page() {
               This question is useful not because it indulges idealism, but because it exposes how much of today's dysfunction is treated as inevitable. If you imagine a TTO without inherited limits, you're forced to separate true constraints from habits, incentives, and legacy design choices.
             </p>
             <blockquote className="text-neutral-700 font-medium leading-7">
-              <p className="text-neutral-500 leading-7">
+              <p className="mb-3 text-neutral-500 leading-7">
                 In a perfect TTO:
               </p>
               <ul className="list-disc pl-6 text-neutral-700 leading-7 space-y-2">
@@ -204,7 +204,7 @@ export default function Page() {
               What follows examines the constraints that prevent technology transfer from working as intended—and outlines why unbundling the system makes this version of a TTO not only plausible, but inevitable.
             </p>
            
-            <p className="mt-3 leading-7 text-neutral-500">
+            <p className="mt-3 mb-3 leading-7 text-neutral-500">
               In the debates and arguments around tech transfer, there are three seminal works,
             </p>
             <ol className="list-decimal pl-6 text-neutral-500 leading-7 space-y-2">
@@ -231,10 +231,10 @@ export default function Page() {
               If you replace "university" for "technology transfer" in Ben's essay, the logic holds perfectly. The TTO problem fits thematically with the larger proposal of unbundling the university.
             </p>
             <blockquote className="text-neutral-700 font-medium leading-7 border-l-4 border-neutral-300 pl-6 my-6">
-              <p className="text-neutral-500 leading-7">
+              <p className="mb-3 text-neutral-500 leading-7">
                 Tech transfer is a tricky thing. Almost everybody touches it at some point: filing an invention disclosure, negotiating a license, watching a promising technology languish in "tech transfer limbo," or wondering why the breakthrough in the lab next door never made it to market.
               </p>
-              <p className="text-neutral-500 leading-7">
+              <p className="mb-3 text-neutral-500 leading-7">
                 Across the board—from administrators to researchers to industry partners to venture capitalists—there's broad agreement that:
               </p>
               <ol className="list-decimal pl-6 text-neutral-500 leading-7 space-y-2">
@@ -242,7 +242,7 @@ export default function Page() {
                 <li>The current system is not working well</li>
                 <li>Reform is needed</li>
               </ol>
-              <p className="text-neutral-500 leading-7">
+              <p className=" mt-3 mb-3 text-neutral-500 leading-7">
                 But there's strong disagreement about:
               </p>
               <ol className="list-decimal pl-6 text-neutral-500 leading-7 space-y-2">
@@ -250,7 +250,7 @@ export default function Page() {
                 <li>What is broken (understaffing? incentives? legal complexity? risk?)</li>
                 <li>How it should change (more funding? new policy? different metrics?)</li>
               </ol>
-              <p className="text-neutral-500 leading-7">
+              <p className=" mt-3 mb-3 text-neutral-500 leading-7">
                 It's a blind-men-and-an-elephant situation. Each stakeholder is holding the piece of the system closest to their priorities:
               </p>
               <ul className="list-disc pl-6 text-neutral-500 leading-7 space-y-2">
@@ -260,16 +260,16 @@ export default function Page() {
                 <li>Policymakers see weak outputs</li>
                 <li>VCs see friction, confusing terms, and often—yes—greed</li>
               </ul>
-              <p className="text-neutral-500 leading-7">
+              <p className=" mt-3 mb-3 text-neutral-500 leading-7">
                 The list goes on.
               </p>
             </blockquote>
-            <p className="mt-3 leading-7 text-neutral-500">
+            <p className="mt-3 mb-3 leading-7 text-neutral-500">
               And to borrow from Ben's conclusion: <br />
               The solution is not to burn the system down. Unbundling a large, entrenched institution is a monumental task.
             </p>
             <p className="mt-3 leading-7 text-neutral-500">
-              The aim of this piece is narrower: fix one function and make it scale globally.
+              The aim of this piece is narrower: fix one function and make it globally scalable.
             </p>
           </section>
 
@@ -341,7 +341,7 @@ export default function Page() {
                 </p>
               </div>
             </div>
-            <p className="mt-3 leading-7 text-neutral-500">
+            <p className="mt-8 leading-7 text-neutral-500">
               This is a scaling problem. The volume of potentially commercializable research exceeds the capacity to evaluate, protect, and market it—especially given the seasonal arrival of disclosures and the manual nature of the work. This isn't a funding problem solved by hiring more staff. It's structural.
             </p>
           </section>

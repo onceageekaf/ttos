@@ -7,7 +7,7 @@ import ModuleCard, {
 } from "@/components/sections/WorkflowHero/ModuleCard";
 import WorkflowConnectors from "@/components/sections/WorkflowHero/WorkflowConnectors";
 import PageShell from "@/components/layout/PageShell";
-// import DotBackground from "@/components/chrome/DotBackground";
+import DotBackground from "@/components/elements/DotBackground";
 
 type WorkflowKey =
   | "disclosure"
@@ -97,9 +97,10 @@ export default function WorkFlowHeroLayout({
       <div className="relative hidden w-full pb-0 lg:block xl:hidden">
         {/* background layer */}
         <div className="pointer-events-none absolute inset-0">
-          {/* <DotBackground /> */}
+          <DotBackground />
           {/* fade / vignette */}
-<div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0)_40%,rgba(255,255,255,0.9)_85%,rgba(255,255,255,1)_100%)]" />        </div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0)_40%,rgba(255,255,255,0.9)_85%,rgba(255,255,255,1)_100%)]" />
+        </div>
 
         <PageShell width="cards" className="relative">
           <div
@@ -107,10 +108,9 @@ export default function WorkFlowHeroLayout({
             className="relative grid isolate"
             style={{
               gridTemplateColumns: "repeat(12, minmax(0, 1fr))",
-              gridTemplateRows: "repeat(10, minmax(auto, 1fr))",
+              gridTemplateRows: "repeat(7, minmax(auto, 1fr))",
               columnGap: "20px",
               rowGap: "20px",
-              minHeight: 680,
             }}
           >
             <WorkflowConnectors
@@ -207,7 +207,7 @@ export default function WorkFlowHeroLayout({
       <div className="relative hidden w-full pb-0 xl:block">
         {/* background layer */}
         <div className="pointer-events-none absolute inset-0">
-          {/* <DotBackground /> */}
+          <DotBackground />
           {/* fade / vignette */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0)_40%,rgba(255,255,255,0.9)_85%,rgba(255,255,255,1)_100%)]" />
         </div>
@@ -219,10 +219,9 @@ export default function WorkFlowHeroLayout({
             className="relative grid isolate h-full"
             style={{
               gridTemplateColumns: "repeat(20, minmax(0, 1fr))",
-              gridTemplateRows: "repeat(10, minmax(auto, 1fr))",
+              gridTemplateRows: "repeat(7, minmax(auto, 1fr))",
               columnGap: "24px",
               rowGap: "24px",
-              minHeight: 760,
             }}
           >
             <WorkflowConnectors

@@ -23,10 +23,47 @@ export default function DashboardShell({
   variant = "case",
 }: Props) {
   const isBelowLg = useIsBelowLg()
+  const containerRef = React.useRef<HTMLDivElement>(null)
+  const [hasScrolledIntoView, setHasScrolledIntoView] = React.useState(false)
+  const [userToggled, setUserToggled] = React.useState(false)
 
-  // default collapsed <=1024
-  const [collapsed, setCollapsed] = React.useState(true)
-  React.useEffect(() => setCollapsed(isBelowLg), [isBelowLg])
+  // Start with sidebar open (unless below lg breakpoint)
+  const [collapsed, setCollapsed] = React.useState(isBelowLg)
+
+  // Auto-collapse when scrolled into view (only once)
+  React.useEffect(() => {
+    const container = containerRef.current
+    if (!container || hasScrolledIntoView || isBelowLg) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasScrolledIntoView && !userToggled) {
+            setCollapsed(true)
+            setHasScrolledIntoView(true)
+            observer.disconnect()
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    observer.observe(container)
+    return () => observer.disconnect()
+  }, [hasScrolledIntoView, userToggled, isBelowLg])
+
+  // Handle manual toggle
+  const handleToggle = React.useCallback(() => {
+    setUserToggled(true)
+    setCollapsed((v) => !v)
+  }, [])
+
+  // Reset when variant changes
+  React.useEffect(() => {
+    setHasScrolledIntoView(false)
+    setUserToggled(false)
+    setCollapsed(isBelowLg)
+  }, [variant, isBelowLg])
 
   const sidebarWidth = collapsed
     ? "w-[60px]"
@@ -42,6 +79,7 @@ export default function DashboardShell({
       )}
     >
       <div
+        ref={containerRef}
         className={cn(
           "relative flex w-full rounded-2xl border border-black/10 bg-white",
           "overflow-hidden",
@@ -69,7 +107,7 @@ export default function DashboardShell({
               {/* collapse button */}
               <button
                 type="button"
-                onClick={() => setCollapsed((v) => !v)}
+                onClick={handleToggle}
                 className="inline-flex h-7 w-7 items-center justify-center rounded-lg border border-black/10 bg-white shadow-sm hover:bg-black/[0.03]"
                 aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
               >
