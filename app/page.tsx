@@ -225,8 +225,8 @@ export default function GlobalPaperStandalonePage() {
                 real-world impact. A recent analysis by Renaissance Philanthropy has identified{" "}
                 <a
                   href={references[1].url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
                   className="font-medium underline underline-offset-2 hover:text-neutral-500"
                 >
                   over 60 distinct failure points
@@ -559,12 +559,12 @@ export default function GlobalPaperStandalonePage() {
               <li key={ref.id}>
                 <a
                   href={ref.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
                   className="hover:text-neutral-900 underline underline-offset-2"
-                >
+          >
                   {ref.label}
-                </a>
+          </a>
               </li>
             ))}
           </ol>
