@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function EssayPage() {
   return (
     <div className="min-h-screen bg-white text-neutral-900">
-      <main className="mx-auto max-w-7xl px-6 py-16">
+      <main className="mx-auto px-6 py-16">
         {/* Title Section */}
         <div className="mb-16 border-b border-neutral-200 pb-16 text-center">
           <h1 className="mb-6 text-4xl font-medium tracking-tight text-neutral-900 md:text-5xl lg:text-6xl">
@@ -24,97 +24,10 @@ export default function EssayPage() {
           </div>
         </div>
 
-        {/* Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12">
-          {/* Left Column: Table of Contents */}
-          <aside className="lg:sticky lg:top-8 lg:h-fit">
-            <div className="rounded-xl border border-neutral-200 bg-white p-6">
-            <a
-              href="#"
-                className="mb-6 block w-full rounded-md border border-neutral-200 bg-neutral-50 px-4 py-2 text-center text-sm font-medium text-neutral-900 transition-colors hover:bg-neutral-100"
-            >
-              Download PDF
-            </a>
-              <nav className="space-y-1 text-sm">
-                <div>
-                  <a href="#what-this-is" className="block font-medium text-neutral-900 hover:underline">
-                0. Executive Summary
-              </a>
-                  <div className="ml-4 mt-1 space-y-1">
-                  
-                    <a href="#perfect-tto" className="block text-neutral-600 hover:text-neutral-900 hover:underline">
-                      What is a perfect TTO?
-                </a>
-                    
-                    
-                    <a href="#introduction" className="block text-neutral-600 hover:text-neutral-900 hover:underline">
-                      Introduction
-                </a>
-              </div>
-            </div>
-                <div>
-                  <a href="#systemic-failures" className="block font-medium text-neutral-900 hover:underline">
-                    1. Systemic failures
-              </a>
-                  <div className="ml-4 mt-1 space-y-1">
-                    <a href="#size-matters" className="block text-neutral-600 hover:text-neutral-900 hover:underline">
-                      Size matters (and the failures scale with it)
-                </a>
-                    <a href="#mit-example" className="block text-neutral-600 hover:text-neutral-900 hover:underline">
-                      Example: MIT TLO
-                </a>
-                    <a href="#human-cost" className="block text-neutral-600 hover:text-neutral-900 hover:underline">
-                  The human cost of bureaucracy
-                </a>
-                    <a href="#what-to-measure" className="block text-neutral-600 hover:text-neutral-900 hover:underline">
-                      What should we measure?
-                    </a>
-                    
-              </div>
-            </div>
-                <div>
-                  <a href="#innovation-pipeline" className="block font-medium text-neutral-900 hover:underline">
-                    2. The innovation pipeline is broken
-              </a>
-                  <div className="ml-4 mt-1 space-y-1">
-                    <a href="#workflow" className="block text-neutral-600 hover:text-neutral-900 hover:underline">
-                      Workflow
-                </a>
-              </div>
-            </div>
-                <div>
-                  <a href="#solution" className="block font-medium text-neutral-900 hover:underline">
-                    3. Solution
-              </a>
-                  <div className="ml-4 mt-1 space-y-1">
-                    <a href="#ai-infrastructure" className="block text-neutral-600 hover:text-neutral-900 hover:underline">
-                  AI as infrastructure, not replacement
-                </a>
-                    <a href="#ttos" className="block text-neutral-600 hover:text-neutral-900 hover:underline">
-                      What is needed: a Tech Transfer Operating System (ttOS)
-                </a>
-                    <a href="#conclusion" className="block text-neutral-600 hover:text-neutral-900 hover:underline">
-                      Conclusion
-                </a>
-                    <a href="#gratitude" className="block text-neutral-600 hover:text-neutral-900 hover:underline">
-                      Gratitude
-              </a>
-            </div>
-            </div>
-          </nav>
-              <a
-                href="#"
-                className="mt-6 block w-full rounded-md border border-neutral-200 bg-neutral-50 px-4 py-2 text-center text-sm font-medium text-neutral-900 transition-colors hover:bg-neutral-100"
-              >
-                Stay in the Loop
-              </a>
-        </div>
-          </aside>
-
-          {/* Right Column: Essay Content */}
-          <article className="prose prose-neutral max-w-none">
+        {/* Essay Content */}
+        <article className="prose prose-neutral mx-auto max-w-[700px] lg:max-w-[750px] xl:max-w-[800px]">
             {/* What this is */}
-            <section id="what-this-is" className="mb-16">
+            <section id="what-this-is" className="mb-8">
               <div className="max-w-none">
                 <p className="text-neutral-500 leading-7">
                   This is an extended essay attempting to summarize what's broken in university technology transfer—across universities, research labs, and academic institutions more broadly.
@@ -126,14 +39,14 @@ export default function EssayPage() {
                   This piece is my attempt to do two things:
                 </p>
                 <ol className="list-decimal pl-6 text-neutral-500 leading-7 space-y-2">
-                  <li>describe the system failures in a way that matches what it feels like to operate inside them, and</li>
-                  <li>present a solution that fits into the larger proposal of unbundling the university, as written by Ben Reinhardt.</li>
+                  <li>Describe the system failures in a way that matches what it feels like to operate inside them, and</li>
+                  <li>Present a solution that fits into the larger proposal of unbundling the university, as written by Ben Reinhardt.</li>
                 </ol>
         </div>
             </section>
 
             {/* What is a perfect TTO */}
-            <section id="perfect-tto" className="mb-16">
+            <section id="perfect-tto" className="mb-3">
           <div className="mb-8 flex items-center gap-4">
                 <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">What is a perfect TTO?</h2>
           </div>
@@ -144,13 +57,13 @@ export default function EssayPage() {
                     <h2 className="text-xl md:text-xl lg:text-2xl font-semibold tracking-tight text-black">
                       "One of the basic rules of the universe is that nothing is perfect. Perfection simply doesn't exist… Without imperfection, neither you nor I would exist."
                     </h2>
-                    <div className="mt-3 text-sm md:text-base text-black/55">
+                    <cite className="mt-3 text-sm md:text-base text-black/55">
                       <div> - Stephen Hawking</div>
-                    </div>
+                    </cite>
                   </div>
                 </div>
                 <p className="text-neutral-500 leading-7">
-                  We still pursue perfection in everything we do. With that caveat in mind, let's start with a simple question.
+                  With that caveat in mind, let's start with a simple question:
                 </p>
                 <p className="text-neutral-500 leading-7">
                   If you removed constraints of budget and talent, what would a perfect tech transfer office actually look like?
@@ -158,17 +71,19 @@ export default function EssayPage() {
                 <p className="text-neutral-500 leading-7">
                   This question is useful not because it indulges idealism, but because it exposes how much of today's dysfunction is treated as inevitable. If you imagine a TTO without inherited limits, you're forced to separate true constraints from habits, incentives, and legacy design choices.
               </p>
-                <p className="text-neutral-500 leading-7">
+              <blockquote className="text-neutral-700 font-medium leading-7">
+                {/* <p className="text-neutral-500 leading-7"> */}
                   In a perfect TTO:
-                </p>
-                <ul className="list-disc pl-6 text-neutral-500 leading-7 space-y-2">
-                  <li>Every disclosed invention is given a credible path to real-world use</li>
-                  <li>The office is a place people want to work with—and work for</li>
-                  <li>Companies actively seek out university technologies rather than being "marketed" to</li>
-                  <li>Researchers engage early and speak openly about positive experiences</li>
-                  <li>TTO staff are known for speed, clarity, and execution—and are in demand elsewhere</li>
-                  <li>University leadership treats the TTO as core institutional infrastructure, not a back-office function, and recognizes its role in turning research into real outcomes</li>
+                {/* </p> */}
+                <ul className="list-disc pl-6 text-neutral-700 leading-7 space-y-2">
+                  <li>Every disclosed invention is given a credible path to real-world use.</li>
+                  <li>The office is a place people want to work with—and work for.</li>
+                  <li>Companies actively seek out university technologies rather than being "marketed" to.</li>
+                  <li>Researchers engage early and speak openly about positive experiences.</li>
+                  <li>TTO staff are known for speed, clarity, and execution—and are in demand elsewhere.</li>
+                  <li>University leadership treats the TTO as core institutional infrastructure, not a back-office function, and recognizes its role in turning research into real outcomes.</li>
                 </ul>
+                </blockquote>
                 <p className="text-neutral-500 leading-7">
                   When I shared this description with friends working inside TTOs, one of them joked that I should add "world peace" to the list.
             </p>
@@ -185,86 +100,91 @@ export default function EssayPage() {
         </section>
 
             {/* Three references */}
-            <section id="references" className="mb-16">
-          <div className="mb-8 flex items-center gap-4">
+            <section id="references" className="mb-8">
+          {/* <div className="mb-8 flex items-center gap-4">
                 <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">Three references I'll use (and where the analogies come from)</h2>
+          </div> */}
+              <div className="max-w-none">
+                <p className="text-neutral-500 leading-7">
+                  In the debates and arguments around tech transfer, there are three seminal works,
+            </p>
+                <ol className="list-decimal pl-6 text-neutral-500 leading-7 space-y-2">
+                 
+                  <li>Unbundling the University <a className="text-blue-600 inline-flex items-center gap-1" href="https://www.unbundle-the-university.com/" target="_blank" rel="noopener noreferrer"><ExternalLink className="h-3 w-3" /></a>— Ben Reinhardt, Speculative Technologies, Feb 2025 
+              </li>
+                  <li>America's Innovation Pipeline Is Leaking <a className="text-blue-600 inline-flex items-center gap-1" href="https://www.renaissancephilanthropy.org/news-and-insights/americas-innovation-pipeline-is-leaking-and-were-losing-game-changing-startups" target="_blank" rel="noopener noreferrer"><ExternalLink className="h-3 w-3" /></a> — Renaissance Philanthropy. Written byOrin Herskowitz, Dmytro Pokhylko, and Kumar Garg</li>
+                  <li>Spinout.fyi <a className="text-blue-600 inline-flex items-center gap-1" href="https://spinout.fyi" target="_blank" rel="noopener noreferrer"><ExternalLink className="h-3 w-3" /></a> — Nathan Benaich, AirStreet Capital. First and most reliable open source data of founders from academia globally</li>
+            </ol>
+                <p className="text-neutral-500 leading-7">
+                  I'll borrow two core metaphors and data from spinout.fyi.
+                </p>
+                <p className="text-neutral-500 leading-7">
+                  Ben uses a bundling analogy: a coffee shop + laundromat + karaoke bar all merged into one space because it made sense historically. But none of the individual functions work properly because the combined system is optimized for none.
+                </p>
+                <p className="text-neutral-500 leading-7">
+                  Renaissance uses the leaky pipe: the innovation pipeline leaks at dozens of points (they list 60+ in the U.S. system alone), and the fix isn't more water—it's fixing the leaks.
+                </p>
+                <p className="text-neutral-500 leading-7">
+                  If you see references to a bundled coffee shop or leaky pipes, that's where they come from.
+                </p>
+          </div>
+        </section>
+
+            {/* Introduction */}
+            <section id="introduction" className="mb-8">
+          <div className="mb-8 flex items-center gap-4">
+                <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">Introduction</h2>
           </div>
               <div className="max-w-none">
                 <p className="text-neutral-500 leading-7">
-                  In the debates and arguments around tech transfer, there are three pieces of work I'll reference:
+                  If you replace "university" for "technology transfer" in Ben's essay, the logic holds perfectly. The TTO problem fits thematically with the larger proposal of unbundling the university.
             </p>
-                <ol className="list-decimal pl-6 text-neutral-500 leading-7 space-y-2">
-                  <li>Spinout.fyi — a collection of founder experiences and data points that surfaces recurring failure modes (I'll revise this description)</li>
-                  <li>Unbundling the University — Ben Reinhardt (Speculative Technologies), published Feb 2025</li>
-                  <li>America's Innovation Pipeline Is Leaking — Renaissance Philanthropy (written by Ian / team; I'll confirm attribution later)</li>
-                </ol>
-                <p className="text-neutral-500 leading-7">
-                  I'll also borrow two core metaphors.
+                <blockquote className="text-neutral-700 font-medium leading-7 border-l-4 border-neutral-300 pl-6 my-6">
+                  <p className="text-neutral-500 leading-7">
+                     Tech transfer is a tricky thing. Almost everybody touches it at some point: filing an invention disclosure, negotiating a license, watching a promising technology languish in "tech transfer limbo," or wondering why the breakthrough in the lab next door never made it to market.
+                  </p>
+                  <p className="text-neutral-500 leading-7">
+                    Across the board—from administrators to researchers to industry partners to venture capitalists—there's broad agreement that:
+                  </p>
+                  <ol className="list-decimal pl-6 text-neutral-500 leading-7 space-y-2">
+                    <li>Tech transfer is important</li>
+                    <li>The current system is not working well</li>
+                    <li>Reform is needed</li>
+                  </ol>
+                  <p className="text-neutral-500 leading-7">
+                    But there's strong disagreement about:
+                  </p>
+                  <ol className="list-decimal pl-6 text-neutral-500 leading-7 space-y-2">
+                    <li>Why tech transfer matters (economic development? social impact? revenue?)</li>
+                    <li>What is broken (understaffing? incentives? legal complexity? risk?)</li>
+                    <li>How it should change (more funding? new policy? different metrics?)</li>
+                  </ol>
+                  <p className="text-neutral-500 leading-7">
+                    It's a blind-men-and-an-elephant situation. Each stakeholder is holding the piece of the system closest to their priorities:
+                  </p>
+                  <ul className="list-disc pl-6 text-neutral-500 leading-7 space-y-2">
+                    <li>Researchers experience bureaucracy and delay</li>
+                    <li>Administrators see liability and risk</li>
+                    <li>Industry sees slow negotiation and unclear ownership</li>
+                    <li>Policymakers see weak outputs</li>
+                    <li>VCs see friction, confusing terms, and often—yes—greed</li>
+                  </ul>
+                  <p className="text-neutral-500 leading-7">
+                    The list goes on.
               </p>
+            </blockquote>
                 <p className="text-neutral-500 leading-7">
-                  Ben uses a bundling analogy: a coffee shop + laundromat + karaoke bar all merged into one space because it made sense historically. But none of the individual functions work properly because the combined system is optimized for none.
-              </p>
-                <p className="text-neutral-500 leading-7">
-                  Renaissance uses the leaky pipe: the innovation pipeline leaks at dozens of points (they list 60+ in the U.S. system alone), and the fix isn't more water—it's fixing the leaks.
-              </p>
-                <p className="text-neutral-500 leading-7">
-                  So: if you see references to a bundled coffee shop or leaky pipes, that's where they come from.
-                </p>
-              </div>
-            </section>
-
-            {/* Introduction */}
-            <section id="introduction" className="mb-16">
-              <div className="mb-8 flex items-center gap-4">
-                <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">Introduction</h2>
-              </div>
-              <div className="max-w-none">
-                <p className="text-neutral-500 leading-7">
-                  If you take Ben's introduction and swap "university" for "technology transfer," it holds surprisingly well.
-            </p>
-                <p className="text-neutral-500 leading-7">
-                  University tech transfer is a tricky thing. Almost everybody touches it at some point: filing an invention disclosure, negotiating a license, watching a promising technology languish in "tech transfer limbo," or wondering why the breakthrough in the lab next door never made it to market.
-                </p>
-                <p className="text-neutral-500 leading-7">
-                  Across the board—from administrators to researchers to industry partners to venture capitalists—there's broad agreement that:
-                </p>
-                <ol className="list-decimal pl-6 text-neutral-500 leading-7 space-y-2">
-                  <li>Tech transfer is important</li>
-                  <li>The current system is not working well</li>
-                  <li>Reform is needed</li>
-            </ol>
-                <p className="text-neutral-500 leading-7">
-                  But there's strong disagreement about:
-                </p>
-                <ol className="list-decimal pl-6 text-neutral-500 leading-7 space-y-2">
-                  <li>Why tech transfer matters (economic development? social impact? revenue?)</li>
-                  <li>What is broken (understaffing? incentives? legal complexity? risk?)</li>
-                  <li>How it should change (more funding? new policy? different metrics?)</li>
-                </ol>
-                <p className="text-neutral-500 leading-7">
-                  It's a blind-men-and-an-elephant situation. Each stakeholder is holding the piece of the system closest to their priorities:
-                </p>
-                <ul className="list-disc pl-6 text-neutral-500 leading-7 space-y-2">
-                  <li>Researchers experience bureaucracy and delay</li>
-                  <li>Administrators see liability and risk</li>
-                  <li>Industry sees slow negotiation and unclear ownership</li>
-                  <li>Policymakers see weak outputs</li>
-                  <li>VCs see friction, confusing terms, and often—yes—greed</li>
-            </ul>
-                <p className="text-neutral-500 leading-7">
-                  The list goes on.
-                </p>
-                <p className="text-neutral-500 leading-7">
-                  And to borrow from Ben's conclusion: the solution is not to burn the system down. Unbundling a large, entrenched institution is a monumental task.
+                  And to borrow from Ben's conclusion: <br />
+                  The solution is not to burn the system down. Unbundling a large, entrenched institution is a monumental task.
             </p>
                 <p className="text-neutral-500 leading-7">
-                  The aim of this piece is narrower: fix one function in a way that supports unbundling.
+                  The aim of this piece is narrower: fix one function and make it scale globally. 
               </p>
           </div>
         </section>
 
             {/* The four systemic failures */}
-            <section id="systemic-failures" className="mb-16">
+            <section id="systemic-failures" className="mb-8">
           <div className="mb-8 flex items-center gap-4">
                 <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">The four systemic failures inside a TTO</h2>
           </div>
@@ -329,20 +249,20 @@ export default function EssayPage() {
                     </div>
                     <p className="text-neutral-600 leading-6 text-sm">
                       Most tech transfer software is built for reporting and compliance, not execution. Data gets entered after the work is done. The tools don't streamline operations—they add administrative burden to an already stretched team.
-                    </p>
-                  </div>
+              </p>
+            </div>
                 </div>
                 <p className="text-neutral-500 leading-7">
                   This is a scaling problem. The volume of potentially commercializable research exceeds the capacity to evaluate, protect, and market it—especially given the seasonal arrival of disclosures and the manual nature of the work. This isn't a funding problem solved by hiring more staff. It's structural.
                 </p>
-              </div>
-            </section>
+          </div>
+        </section>
 
             {/* Size matters */}
-            <section id="size-matters" className="mb-16">
-              <div className="mb-8 flex items-center gap-4">
-                <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">Size matters (and the failures scale with it)</h2>
-              </div>
+            <section id="size-matters" className="mb-8">
+          <div className="mb-8 flex items-center gap-4">
+                <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">Size matters</h2>
+          </div>
               <div className="max-w-none">
                 <p className="text-neutral-500 leading-7">
                   Let's do a rough segmentation of TTOs by size:
@@ -367,19 +287,19 @@ export default function EssayPage() {
                   ))}
                 </div>
                 <p className="text-neutral-500 leading-7">
-                  Now let's look at an XL office.
+                  Now let's look at an XL office. 
                 </p>
               </div>
             </section>
 
             {/* MIT Example */}
-            <section id="mit-example" className="mb-16">
-              <div className="mb-8 flex items-center gap-4">
+            <section id="mit-example" className="mb-8">
+              {/* <div className="mb-8 flex items-center gap-4">
                 <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">Example: MIT TLO (an XL office)</h2>
-              </div>
+              </div> */}
               <div className="max-w-none">
                 <p className="text-neutral-500 leading-7">
-                  MIT's Technology Licensing Office is a useful example because it's well-resourced and transparent.
+                  MIT's Technology Licensing Office (TLO) is a great example of the volume, sizing and publicly available report. 
                 </p>
                 {/* MIT metrics */}
                 <div className="rounded-2xl border border-black/10 bg-white p-5 elevation-md">
@@ -473,11 +393,45 @@ export default function EssayPage() {
                       </div>
                     </div>
             </div>
+                <p className="text-neutral-500 leading-7">
+                  Two immediate tells:
+                </p>
+                <ol className="list-decimal pl-6 text-neutral-500 leading-7 space-y-2">
+                  <li>Admin/support outnumbers the core licensing team</li>
+                  <li>The volume is enormous relative to the core team</li>
+                </ol>
+                <p className="text-neutral-500 leading-7">
+                  Even basic math makes the point. If reviewing a disclosure takes 10–40 hours, and we use a conservative 20 hours average, that's:
+                </p>
+                <p className="text-neutral-500 leading-7">
+                  684 × 20 = 13,680 hours of evaluation work.
+                </p>
+                <p className="text-neutral-500 leading-7">
+                  Spread across 21 licensing staff ( 16 staff + 3 Team leads + 2 interns), that's roughly 4 months per person per year just on evaluating new disclosures—before you factor in:
+                </p>
+                <ul className="list-disc pl-6 text-neutral-600 leading-7 space-y-2">
+                  <li>patent prosecution and office actions</li>
+                  <li>marketing and outreach</li>
+                  <li> NDAs, MTAs and other agreements</li>
+                  <li>negotiation cycles</li>
+                  <li>internal approvals</li>
+                  <li>portfolio maintenance</li>
+                  <li>reporting and CRM updates</li>
+            </ul>
+                <p className="text-neutral-500 leading-7">
+                  And the workload isn't evenly distributed. Some departments disclose far more than others. Some licensing professionals carry much heavier loads. That variability makes it worse, not better.
+                </p>
+                <p className="text-neutral-500 leading-7">
+                  Also, life sciences dominate licensing volume and revenue. Physical sciences and engineering often move slower and license less frequently, because of industry structure and adoption friction. 
+                </p>
+                <p className="text-neutral-500 leading-7">
+                  This pattern isn't unique to MIT. It shows up everywhere—just with less resourcing.
+                </p>
           </div>
         </section>
 
             {/* The human cost */}
-            <section id="human-cost" className="mb-16">
+            <section id="human-cost" className="mb-8">
           <div className="mb-8 flex items-center gap-4">
                 <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">The human cost of bureaucracy</h2>
           </div>
@@ -497,17 +451,17 @@ export default function EssayPage() {
                 <p className="text-neutral-500 leading-7">
                   The cycle continues.
             </p>
-              </div>
-            </section>
+          </div>
+        </section>
 
             {/* What should we measure */}
-            <section id="what-to-measure" className="mb-16">
-              <div className="mb-8 flex items-center gap-4">
+            <section id="what-to-measure" className="mb-8">
+          <div className="mb-8 flex items-center gap-4">
                 <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">What should we measure?</h2>
-              </div>
+          </div>
               <div className="max-w-none">
                 <p className="text-neutral-500 leading-7">
-                  The key number for any tech transfer office should be licenses and options executed per year.
+                  The key number for any tech transfer office should be licenses executed per year.
             </p>
                 <p className="text-neutral-500 leading-7">
                   Revenue and equity are not good performance metrics for the office itself. The TTO doesn't control whether the licensee succeeds, or whether the startup becomes valuable. Those outcomes depend on the company and the founders.
@@ -516,16 +470,27 @@ export default function EssayPage() {
                   So the most direct measurable "output" the office controls is: executed agreements.
                 </p>
                 <p className="text-neutral-500 leading-7">
-                  For MIT, that's ~137 licenses/options/year across ~16 licensing staff—about ~7 per staff if averaged. That sounds good on paper, but it hides variance by field and deal complexity.
+                  For MIT, that's ~137 licenses/options/year across ~20 licensing staff—about ~7 per staff if averaged. That sounds good on paper, but it hides variance by field and deal complexity.
                 </p>
                 <p className="text-neutral-500 leading-7">
-                  And again: this is only the "execution count," not the total work required to make those executions happen.
-            </p>
+                  And again, this is only the "execution count," not the total work required to make those executions happen. 
+                </p>
+                <p className="text-neutral-500 leading-7">
+                  The key metric of number of licenses realigns the focus on revenue generation and not "economic development". Helps frame the questions:
+                </p>
+                <ul className="list-disc pl-6 text-neutral-500 leading-7 space-y-2">
+                  <li>"How many active cases should a licensing staff handle?"</li>
+                  <li>"How many licenses should a licensing staff execute per year?"</li>
+                </ul>
+                <p className="text-neutral-500 leading-7">
+                  This change in metric changes the culture to be deal focused and not "economic development".
+                </p>
+
               </div>
             </section>
 
             {/* The process is manual */}
-            <section id="manual-process" className="mb-16">
+            <section id="manual-process" className="mb-8">
               <div className="mb-8 flex items-center gap-4">
                 <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">The process is manual all the way down</h2>
               </div>
@@ -555,18 +520,16 @@ export default function EssayPage() {
                 <p className="text-neutral-500 leading-7">
                   If this isn't a system designed to fail, it's at least a system designed to stall.
             </p>
-              </div>
-            </section>
+          </div>
+        </section>
 
             {/* The innovation pipeline */}
-            <section id="innovation-pipeline" className="mb-16">
-              <div className="mb-8 flex items-center gap-4">
+            <section id="innovation-pipeline" className="mb-8">
+          <div className="mb-8 flex items-center gap-4">
                 <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">The innovation pipeline is broken</h2>
-              </div>
+          </div>
               <div className="max-w-none">
-                <p className="text-neutral-500 leading-7 italic">
-                  (You have good content here; I'll leave it in your voice but tighten later.)
-                </p>
+                
                 <p className="text-neutral-500 leading-7">
                   Every year the world invests over $700B in R&D. The output is extraordinary discoveries—but a tiny fraction reaches market.
             </p>
@@ -586,14 +549,12 @@ export default function EssayPage() {
         </section>
 
             {/* Workflow */}
-            <section id="workflow" className="mb-16">
+            <section id="workflow" className="mb-8">
           <div className="mb-8 flex items-center gap-4">
                 <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">Workflow (rough outline)</h2>
           </div>
               <div className="max-w-none">
-                <p className="text-neutral-500 leading-7 italic">
-                  (This section is long, but it's valuable because it shows where the labor actually is. For flow, I'm keeping your structure and cleaning language, not rewriting it into a diagram.)
-                </p>
+              
                 <p className="text-neutral-500 leading-7">
                   Disclosure starts with a form. Most of the information already exists in manuscripts, slides, or lab notes—but the form demands it again, often in a way that doesn't match how academics think about their work.
                 </p>
@@ -619,9 +580,9 @@ export default function EssayPage() {
         </section>
 
             {/* Solution */}
-            <section id="solution" className="mb-16">
+            <section id="solution" className="mb-8">
           <div className="mb-8 flex items-center gap-4">
-                <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">Solution (in your voice, cadence fixed)</h2>
+                <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">Solution</h2>
           </div>
               <div className="max-w-none">
                 <p className="text-neutral-500 leading-7">
@@ -634,39 +595,39 @@ export default function EssayPage() {
                   The goal is not replacing human judgment. It's augmenting human capacity—handling routine analysis and coordination so licensing professionals can spend time on the high-value work that actually requires expertise.
               </p>
                 <p className="text-neutral-500 leading-7">
-                  The problems in tech transfer are structural, not personal. Most TTO professionals are competent and dedicated people working inside a system that makes success difficult.
+                  The problems in tech transfer are structural, not always personnel. Most TTO professionals are competent and dedicated people working inside a system that makes success difficult.
                 </p>
                 <p className="text-neutral-500 leading-7">
                   Fixing tech transfer means changing the relationship between:
               </p>
                 <ul className="list-disc pl-6 text-neutral-500 leading-7 space-y-2">
-                  <li>volume of work, and</li>
-                  <li>capacity to do it</li>
-                </ul>
+                  <li>Volume of work, and</li>
+                  <li>Capacity to do it</li>
+            </ul>
                 <p className="text-neutral-500 leading-7">
                   There are two classical mechanisms:
                 </p>
                 <ol className="list-decimal pl-6 text-neutral-500 leading-7 space-y-2">
-                  <li>reduce the work (be more selective)</li>
-                  <li>increase capacity (do the same work faster)</li>
+                  <li>Reduce the work (be more selective)</li>
+                  <li>Increase capacity (do the same work faster)</li>
                 </ol>
                 <p className="text-neutral-500 leading-7">
-                  Option 1 is unpalatable. Practically, it's hard to predict which inventions will matter. Philosophically, the mission is to maximize societal benefit—choosing not to pursue potential impact is hard to justify.
+                  Option 1 is unpalatable. <br /> Practically, it's hard to predict which inventions will matter. Philosophically, the mission is to maximize societal benefit—choosing not to pursue potential impact is hard to justify.
                 </p>
                 <p className="text-neutral-500 leading-7">
-                  Option 2 historically means hiring more staff, which hits budget constraints and talent scarcity—and doesn't solve coordination overhead.
+                  Option 2 is adding more water. <br /> Historically means hiring more staff, which hits budget constraints and talent scarcity—and doesn't solve coordination overhead.
                 </p>
                 <p className="text-neutral-500 leading-7">
-                  AI offers a third path: change the nature of the work, so humans do judgment and relationships while machines handle routine analysis and operational burden.
-              </p>
-            </div>
-            </section>
+                  AI offers a third path: <br /> Change the nature of the work, so humans do judgment and relationships while machines handle routine analysis and operational burden.
+            </p>
+          </div>
+        </section>
 
             {/* AI as infrastructure */}
-            <section id="ai-infrastructure" className="mb-16">
-              <div className="mb-8 flex items-center gap-4">
+            <section id="ai-infrastructure" className="mb-8">
+          <div className="mb-8 flex items-center gap-4">
                 <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">AI as infrastructure, not replacement</h2>
-              </div>
+          </div>
               <div className="max-w-none">
                 <p className="text-neutral-500 leading-7">
                   Human judgment remains essential: evaluating potential, negotiating terms, managing relationships, making tradeoffs.
@@ -687,37 +648,78 @@ export default function EssayPage() {
             </section>
 
             {/* What is needed: ttOS */}
-            <section id="ttos" className="mb-16">
+            <section id="ttos" className="mb-8">
               <div className="mb-8 flex items-center gap-4">
-                <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">What is needed: a Tech Transfer Operating System (ttOS)</h2>
+                <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">What is needed: <br/> a technology transfer operating system (ttOS)</h2>
               </div>
               <div className="max-w-none">
                 <p className="text-neutral-500 leading-7">
-                  What I'm proposing is a Tech Transfer Operating System: ttOS.
+                  What I'm proposing is a technology transfer operating system: ttOS.
                 </p>
                 <p className="text-neutral-500 leading-7">
-                  An AI-powered infrastructure that supports tech transfer execution—especially for institutions that can't staff like MIT.
+                  An AI-powered infrastructure that supports tech transfer execution—especially for institutions that can't staff like MIT. And, for XL scale offices, reduction in time of the manual work.
                 </p>
                 <p className="text-neutral-500 leading-7">
                   Core capabilities:
                 </p>
-                <ol className="list-decimal pl-6 text-neutral-500 leading-7 space-y-2">
-                  <li>Automatic CRM: the work generates the record; no manual updating after the fact</li>
-                  <li>Dashboards: inventor view + case view; fewer "where is this?" emails</li>
-                  <li>Signature routing: rules + timeouts + escalation; make bottlenecks visible instead of hidden</li>
-                  <li>Agreement orchestration: stop treating each university's NDA as sacred scripture; standardize by geography and tolerance</li>
-                  <li>Discovery + visibility: make inventions genuinely discoverable, not buried on a TTO site</li>
-                  <li>Bundling: make it easy to combine related IP across institutions without doubling friction</li>
-                  <li>Produce: make early-stage production possible using existing academic infrastructure—ttOS as the execution layer for early translation</li>
+                <ol className="list-decimal pl-6 text-neutral-500 leading-7 space-y-6">
+                  <li>
+                    <div>Core automation modules: Disclosure, Evaluation, Protection, Marketing, and Licensing</div>
+                    <div className="mt-4 rounded-lg border-2 border-dashed border-neutral-300 bg-neutral-50 p-8 text-center text-sm text-neutral-400">
+                      [Visual placeholder: Core automation modules diagram]
+            </div>
+                  </li>
+                  <li>
+                    <div>Dashboards: inventor view + case view; fewer "where is this?" emails</div>
+                    <div className="mt-4 rounded-lg border-2 border-dashed border-neutral-300 bg-neutral-50 p-8 text-center text-sm text-neutral-400">
+                      [Visual placeholder: Dashboard mockup]
+          </div>
+                  </li>
+                  <li>
+                    <div>Automatic CRM: the work generates the record; no manual updating after the fact</div>
+                    <div className="mt-4 rounded-lg border-2 border-dashed border-neutral-300 bg-neutral-50 p-8 text-center text-sm text-neutral-400">
+                      [Visual placeholder: Automatic CRM flow diagram]
+          </div>
+                  </li>
+                  <li>
+                    <div>Signature routing: rules + timeouts + escalation; make bottlenecks visible instead of hidden</div>
+                    <div className="mt-4 rounded-lg border-2 border-dashed border-neutral-300 bg-neutral-50 p-8 text-center text-sm text-neutral-400">
+                      [Visual placeholder: Signature routing workflow]
+            </div>
+                  </li>
+                  <li>
+                    <div>Agreement orchestration: stop treating each university's NDA as sacred scripture; standardize by geography and tolerance</div>
+                    <div className="mt-4 rounded-lg border-2 border-dashed border-neutral-300 bg-neutral-50 p-8 text-center text-sm text-neutral-400">
+                      [Visual placeholder: Agreement orchestration system]
+            </div>
+                  </li>
+                  <li>
+                    <div>Discovery + visibility: make inventions genuinely discoverable, not buried on a TTO site</div>
+                    <div className="mt-4 rounded-lg border-2 border-dashed border-neutral-300 bg-neutral-50 p-8 text-center text-sm text-neutral-400">
+                      [Visual placeholder: Discovery platform interface]
+            </div>
+                  </li>
+                  <li>
+                    <div>Bundling: make it easy to combine related IP across institutions without doubling friction</div>
+                    <div className="mt-4 rounded-lg border-2 border-dashed border-neutral-300 bg-neutral-50 p-8 text-center text-sm text-neutral-400">
+                      [Visual placeholder: IP bundling visualization]
+            </div>
+                  </li>
+                  <li>
+                    <div>Produce: make early-stage production possible using existing academic infrastructure—ttOS as the execution layer for early translation</div>
+                    <div className="mt-4 rounded-lg border-2 border-dashed border-neutral-300 bg-neutral-50 p-8 text-center text-sm text-neutral-400">
+                      [Visual placeholder: Production workflow diagram]
+            </div>
+                  </li>
                 </ol>
             </div>
             </section>
 
             {/* Conclusion */}
-            <section id="conclusion" className="mb-16">
+            <section id="conclusion" className="mb-8">
               <div className="mb-8 flex items-center gap-4">
-                <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">Conclusion (cadence tightened)</h2>
-              </div>
+                <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">Conclusion</h2>
+            </div>
               <div className="max-w-none">
                 <p className="text-neutral-500 leading-7">
                   Technology transfer matters because research matters. University labs generate insights that could improve human welfare—but potential is not impact. Potential becomes impact only when research reaches people and organizations that can apply it.
@@ -732,7 +734,7 @@ export default function EssayPage() {
         </section>
 
             {/* Gratitude */}
-            <section id="gratitude" className="mb-16">
+            <section id="gratitude" className="mb-8">
               <h2 className="mb-6 text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">
                 Gratitude
               </h2>
@@ -743,7 +745,6 @@ export default function EssayPage() {
             </div>
             </section>
           </article>
-          </div>
       </main>
     </div>
   )
