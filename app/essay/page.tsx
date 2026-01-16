@@ -5,20 +5,20 @@ type TocItem = { id: string; label: string; depth: 2 | 3 };
 
 const TOC: TocItem[] = [
   { id: "perfect-tto", label: "What is a perfect TTO?", depth: 2 },
-  { id: "introduction", label: "Introduction", depth: 2 },
-  { id: "systemic-failures", label: "The four systemic failures", depth: 2 },
+  { id: "introduction", label: "Introduction", depth: 3 },
+  { id: "systemic-failures", label: "The four systemic failures", depth: 3 },
   { id: "size-matters", label: "Size matters", depth: 2 },
-  { id: "mit-example", label: "Example: MIT TLO", depth: 2 },
+  { id: "mit-example", label: "Example: MIT TLO", depth: 3 },
   { id: "human-cost", label: "The human cost", depth: 2 },
-  { id: "what-to-measure", label: "What should we measure?", depth: 2 },
+  { id: "what-to-measure", label: "What should we measure?", depth: 3 },
   { id: "manual-process", label: "The process is manual", depth: 2 },
-  { id: "innovation-pipeline", label: "The innovation pipeline", depth: 2 },
-  { id: "workflow", label: "Workflow", depth: 2 },
-  { id: "solution", label: "Solution", depth: 2 },
+  { id: "innovation-pipeline", label: "The innovation pipeline", depth: 3 },
+  { id: "workflow", label: "Workflow", depth: 3 },
+  { id: "solution", label: "Solution", depth: 3 },
   { id: "ai-infrastructure", label: "AI as infrastructure", depth: 2 },
-  { id: "ttos", label: "What is needed: ttOS", depth: 2 },
+  { id: "ttos", label: "What is needed: ttOS", depth: 3 },
   { id: "conclusion", label: "Conclusion", depth: 2 },
-  { id: "gratitude", label: "Gratitude", depth: 2 },
+  
 ];
 
 function clsx(...s: Array<string | false | null | undefined>) {
@@ -602,7 +602,7 @@ export default function Page() {
           {/* Workflow */}
           <section className="mt-12">
             <AnchorHeading id="workflow" as="h2" className="text-xl font-medium text-neutral-900">
-              Workflow (rough outline)
+              Workflow
             </AnchorHeading>
             <p className="mt-3 leading-7 text-neutral-500">
               Disclosure starts with a form. Most of the information already exists in manuscripts, slides, or lab notes—but the form demands it again, often in a way that doesn't match how academics think about their work.
