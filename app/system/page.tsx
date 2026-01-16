@@ -1,8 +1,6 @@
 // src/app/system/page.tsx
 "use client"
-import DotBackground from "@/components/chrome/DotBackground"
-import HeroSection from "@/components/layout/HeroSection"
-import PageSection from "@/components/layout/PageSection"
+import DotBackground from "@/components/elements/DotBackground"
 import SystemHeroAnimation from "@/components/sections/System/SystemHeroAnimation"
 import SectionIntro from "@/components/sections/System/SectionIntro"
 import C1FlipAnimation from "./animation/C1FlipAnimation"
@@ -19,19 +17,21 @@ export default function SystemPage() {
       <div className="relative">
         <DotBackground />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0)_40%,rgba(255,255,255,0.9)_85%,rgba(255,255,255,1)_100%)]" />
-        <div className="relative z-10">
-          <HeroSection
-            className="pt-60 pb-40"
-            headline="Blazingly fast."
-            subline="Turn hours into minutes."
-          >
+        <div className="relative z-10 pt-60 pb-40">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-4">
+              Blazingly fast.
+            </h1>
+            <p className="text-xl text-neutral-600 mb-6">
+              Turn hours into minutes.
+            </p>
             <SystemHeroAnimation className="mt-6" />
-          </HeroSection>
+          </div>
         </div>
       </div>
     
       {/* CORE MODULES */}
-      <PageSection topDivider>
+      <section className="py-16">
       <div className="border border-black/10 bg-white p-6 md:p-8">
         <SectionIntro
           eyebrow="System"
@@ -321,7 +321,7 @@ export default function SystemPage() {
             </section>
       </div>
       </div>
-      </PageSection>
+      </section>
     </>
   )
 }

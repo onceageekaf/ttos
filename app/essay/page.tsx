@@ -881,10 +881,7 @@ export default function Page() {
             <a className="rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-2 text-sm font-medium text-neutral-900 hover:bg-neutral-100 hover:underline" href="#top">
               Back to top
             </a>
-            <Link className="rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-2 text-sm font-medium text-neutral-900 hover:bg-neutral-100 hover:underline" href="/system">
-              Explore the system
-          </Link>
-        </div>
+          </div>
         </article>
         </div>
       </main>
