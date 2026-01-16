@@ -3,7 +3,7 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 import { LAYOUT_WIDTHS } from "@/lib/layout"
-import { useIsBelowLg } from "@/hooks/useBreakpoint"
+import { useIsBelowLg } from "@/components/hooks/useBreakpoint"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 import DashboardSidebar from "@/components/sections/Dashboard/layout/DashboardSidebar"

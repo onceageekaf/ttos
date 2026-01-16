@@ -103,11 +103,13 @@ export default function CaseView() {
 
   return (
     <div className="w-full">
-      <PipelineProgress
-        activeStage={stage}
-        cycleKey={cycleKey}
-        onStageSelect={onUserSelectStage}
-      />
+      <div className="mt-6">
+        <PipelineProgress
+          activeStage={stage}
+          cycleKey={cycleKey}
+          onStageSelect={onUserSelectStage}
+        />
+      </div>
 
       <div className="mt-4">
         {stage === "evaluation" ? <EvaluationView1 revealStep={revealStep} /> : null}

@@ -145,7 +145,13 @@ export default function DashboardSidebar({
   // open state per-variant
   const initialOpen = React.useMemo(() => {
     const o: Record<string, boolean> = {}
-    NAV.forEach((n) => (o[n.id] = true))
+    // For case variant: only first item open (accordion behavior)
+    // For inventor variant: all items open
+    if (variant === "case") {
+      NAV.forEach((n, idx) => (o[n.id] = idx === 0))
+    } else {
+      NAV.forEach((n) => (o[n.id] = true))
+    }
     return o
   }, [variant]) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -212,7 +218,19 @@ export default function DashboardSidebar({
                 type="button"
                 onClick={() => {
                   if (!hasChildren) return
-                  setOpen((s) => ({ ...s, [group.id]: !s[group.id] }))
+                  if (variant === "case") {
+                    // Accordion behavior: close all others, toggle this one
+                    setOpen((s) => {
+                      const newState: Record<string, boolean> = {}
+                      NAV.forEach((n) => {
+                        newState[n.id] = n.id === group.id ? !s[group.id] : false
+                      })
+                      return newState
+                    })
+                  } else {
+                    // Normal toggle behavior for inventor variant
+                    setOpen((s) => ({ ...s, [group.id]: !s[group.id] }))
+                  }
                 }}
                 className={cn(
                   "group flex w-full items-center gap-2 rounded-xl",
@@ -320,8 +338,10 @@ export default function DashboardSidebar({
         >
           <div
             className={cn(
-              "h-8 w-8 ",
-              "flex items-center justify-center text-[12px] font-semibold text-black/70"
+              "h-8 w-8 rounded-full flex items-center justify-center text-[12px] font-semibold",
+              collapsed 
+                ? "bg-black text-white" 
+                : "text-black/70"
             )}
             aria-label="Jane Doe"
             title="Jane Doe"

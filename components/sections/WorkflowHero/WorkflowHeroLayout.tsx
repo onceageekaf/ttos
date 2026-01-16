@@ -4,10 +4,10 @@ import React from "react";
 import ModuleCard, {
   ModuleCardItem,
   ModuleCardFooter,
-} from "@/components/elements/ModuleCard";
+} from "@/components/sections/WorkflowHero/ModuleCard";
 import WorkflowConnectors from "@/components/sections/WorkflowHero/WorkflowConnectors";
 import PageShell from "@/components/layout/PageShell";
-import DotBackground from "@/components/chrome/DotBackground";
+// import DotBackground from "@/components/chrome/DotBackground";
 
 type WorkflowKey =
   | "disclosure"
@@ -94,10 +94,10 @@ export default function WorkFlowHeroLayout({
       {/* =========================
           DESKTOP LG (1024–1279)
         ========================== */}
-      <div className="relative hidden w-full pb-16 lg:block xl:hidden">
+      <div className="relative hidden w-full pb-0 lg:block xl:hidden">
         {/* background layer */}
         <div className="pointer-events-none absolute inset-0">
-          <DotBackground />
+          {/* <DotBackground /> */}
           {/* fade / vignette */}
 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0)_40%,rgba(255,255,255,0.9)_85%,rgba(255,255,255,1)_100%)]" />        </div>
 
@@ -107,7 +107,7 @@ export default function WorkFlowHeroLayout({
             className="relative grid isolate"
             style={{
               gridTemplateColumns: "repeat(12, minmax(0, 1fr))",
-              gridTemplateRows: "repeat(12, 32px)",
+              gridTemplateRows: "repeat(10, minmax(auto, 1fr))",
               columnGap: "20px",
               rowGap: "20px",
               minHeight: 680,
@@ -126,14 +126,14 @@ export default function WorkFlowHeroLayout({
             {/* HERO */}
             <div
               className="z-[10] flex justify-center"
-              style={{ gridColumn: "4 / 10", gridRow: "5 / 8" }}
+              style={{ gridColumn: "4 / 10", gridRow: "1 / 4" }}
             >
               <div className="w-full max-w-[520px]">{heroSlot ?? null}</div>
             </div>
 
-            {/* Disclosure */}
+            {/* Top row: Disclosure, Evaluation, Protection */}
             {cardByKey.disclosure ? (
-              <div className="z-[5]" style={{ gridColumn: "1 / 5", gridRow: "6 / 7" }}>
+              <div className="z-[5] flex justify-start items-start min-w-0" style={{ gridColumn: "1 / 3", gridRow: "2 / 4" }}>
                 <ModuleCard
                   anchorId="disclosure"
                   title={cardByKey.disclosure.title}
@@ -145,23 +145,8 @@ export default function WorkFlowHeroLayout({
               </div>
             ) : null}
 
-            {/* Licensing */}
-            {cardByKey.licensing ? (
-              <div className="z-[5]" style={{ gridColumn: "11/ 13", gridRow: "6 / 7" }}>
-                <ModuleCard
-                  anchorId="licensing"
-                  title={cardByKey.licensing.title}
-                  icon={cardByKey.licensing.icon}
-                  items={cardByKey.licensing.items}
-                  footer={cardByKey.licensing.footer}
-                  variant={compactCards ? "compact" : "default"}
-                />
-              </div>
-            ) : null}
-
-            {/* Bottom row */}
             {cardByKey.evaluation ? (
-              <div className="z-[10]" style={{ gridColumn: "3 / 6", gridRow: "11 / 12" }}>
+              <div className="z-[5] flex justify-center items-start min-w-0" style={{ gridColumn: "5 / 9", gridRow: "2 / 4", transform: "translateX(10px)" }}>
                 <ModuleCard
                   anchorId="evaluation"
                   title={cardByKey.evaluation.title}
@@ -174,7 +159,7 @@ export default function WorkFlowHeroLayout({
             ) : null}
 
             {cardByKey.protection ? (
-              <div className="z-[10]" style={{ gridColumn: "6 / 9", gridRow: "11 / 12" }}>
+              <div className="z-[5] flex justify-end items-start min-w-0" style={{ gridColumn: "12 / 15", gridRow: "2 / 4" }}>
                 <ModuleCard
                   anchorId="protection"
                   title={cardByKey.protection.title}
@@ -186,8 +171,22 @@ export default function WorkFlowHeroLayout({
               </div>
             ) : null}
 
+            {/* Bottom row: Licensing, Marketing - equal spacing from edges */}
+            {cardByKey.licensing ? (
+              <div className="z-[10] flex justify-center items-start min-w-0" style={{ gridColumn: "2 / 5", gridRow: "5 / 7" }}>
+                <ModuleCard
+                  anchorId="licensing"
+                  title={cardByKey.licensing.title}
+                  icon={cardByKey.licensing.icon}
+                  items={cardByKey.licensing.items}
+                  footer={cardByKey.licensing.footer}
+                  variant={compactCards ? "compact" : "default"}
+                />
+              </div>
+            ) : null}
+
             {cardByKey.marketing ? (
-              <div className="z-[10]" style={{ gridColumn: "9 / 12", gridRow: "11 / 12" }}>
+              <div className="z-[10] flex justify-center items-start min-w-0" style={{ gridColumn: "9 / 12", gridRow: "5 / 7" }}>
                 <ModuleCard
                   anchorId="marketing"
                   title={cardByKey.marketing.title}
@@ -205,10 +204,10 @@ export default function WorkFlowHeroLayout({
       {/* =========================
          DESKTOP XL (>=1280)
       ========================== */}
-      <div className="relative hidden w-full pb-16 xl:block">
+      <div className="relative hidden w-full pb-0 xl:block">
         {/* background layer */}
         <div className="pointer-events-none absolute inset-0">
-          <DotBackground />
+          {/* <DotBackground /> */}
           {/* fade / vignette */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0)_40%,rgba(255,255,255,0.9)_85%,rgba(255,255,255,1)_100%)]" />
         </div>
@@ -220,7 +219,7 @@ export default function WorkFlowHeroLayout({
             className="relative grid isolate h-full"
             style={{
               gridTemplateColumns: "repeat(20, minmax(0, 1fr))",
-              gridTemplateRows: "repeat(16, 34px)",
+              gridTemplateRows: "repeat(10, minmax(auto, 1fr))",
               columnGap: "24px",
               rowGap: "24px",
               minHeight: 760,
@@ -241,18 +240,18 @@ export default function WorkFlowHeroLayout({
               className="z-[10] flex justify-center"
               style={{
                 gridColumn: "8 / 14",
-                gridRow: "5 / 10",
+                gridRow: "1 / 6",
                 alignSelf: "start",
               }}
             >
               <div className="w-full max-w-[520px]">{heroSlot ?? null}</div>
             </div>
 
-            {/* Disclosure */}
+            {/* Top row: Disclosure, Evaluation, Protection */}
             {cardByKey.disclosure ? (
               <div
-                style={{ gridColumn: "3 / 6", gridRow: "6 / 7" }}
-                className="z-[5] justify-self-start"
+                style={{ gridColumn: "1 / 4", gridRow: "2 / 4" }}
+                className="z-[5] flex justify-start items-start min-w-0"
               >
                 <ModuleCard
                   anchorId="disclosure"
@@ -265,28 +264,10 @@ export default function WorkFlowHeroLayout({
               </div>
             ) : null}
 
-            {/* Licensing */}
-            {cardByKey.licensing ? (
-              <div
-                style={{ gridColumn: "16 / 19", gridRow: "6 / 7" }}
-                className="z-[5] justify-self-end"
-              >
-                <ModuleCard
-                  anchorId="licensing"
-                  title={cardByKey.licensing.title}
-                  icon={cardByKey.licensing.icon}
-                  items={cardByKey.licensing.items}
-                  footer={cardByKey.licensing.footer}
-                  variant={compactCards ? "compact" : "default"}
-                />
-              </div>
-            ) : null}
-
-            {/* Evaluation */}
             {cardByKey.evaluation ? (
               <div
-                style={{ gridColumn: "6 / 8", gridRow: "11 / 12" }}
-                className="z-[10] justify-self-center"
+                style={{ gridColumn: "8 / 12", gridRow: "2 / 4", transform: "translateX(12px)" }}
+                className="z-[5] flex justify-center items-start min-w-0"
               >
                 <ModuleCard
                   anchorId="evaluation"
@@ -299,11 +280,10 @@ export default function WorkFlowHeroLayout({
               </div>
             ) : null}
 
-            {/* Protection */}
             {cardByKey.protection ? (
               <div
-                style={{ gridColumn: "10 / 12", gridRow: "11 / 12" }}
-                className="z-[10] justify-self-center"
+                style={{ gridColumn: "16 / 20", gridRow: "2 / 4" }}
+                className="z-[5] flex justify-end items-start min-w-0"
               >
                 <ModuleCard
                   anchorId="protection"
@@ -316,11 +296,27 @@ export default function WorkFlowHeroLayout({
               </div>
             ) : null}
 
-            {/* Marketing */}
+            {/* Bottom row: Licensing, Marketing - equal spacing from edges */}
+            {cardByKey.licensing ? (
+              <div
+                style={{ gridColumn: "5 / 9", gridRow: "5 / 7" }}
+                className="z-[10] flex justify-center items-start min-w-0"
+              >
+                <ModuleCard
+                  anchorId="licensing"
+                  title={cardByKey.licensing.title}
+                  icon={cardByKey.licensing.icon}
+                  items={cardByKey.licensing.items}
+                  footer={cardByKey.licensing.footer}
+                  variant={compactCards ? "compact" : "default"}
+                />
+              </div>
+            ) : null}
+
             {cardByKey.marketing ? (
               <div
-                style={{ gridColumn: "13 / 17", gridRow: "11 / 12" }}
-                className="z-[10] justify-self-center"
+                style={{ gridColumn: "12 / 16", gridRow: "5 / 7" }}
+                className="z-[10] flex justify-center items-start min-w-0"
               >
                 <ModuleCard
                   anchorId="marketing"

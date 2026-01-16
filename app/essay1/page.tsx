@@ -42,14 +42,14 @@ export default function EssayPage() {
                   <li>Describe the system failures in a way that matches what it feels like to operate inside them, and</li>
                   <li>Present a solution that fits into the larger proposal of unbundling the university, as written by Ben Reinhardt.</li>
                 </ol>
-        </div>
+              </div>
             </section>
 
             {/* What is a perfect TTO */}
             <section id="perfect-tto" className="mb-3">
           <div className="mb-8 flex items-center gap-4">
                 <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">What is a perfect TTO?</h2>
-          </div>
+            </div>
               <div className="max-w-none">
                 <div className="relative my-8">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0)_35%,rgba(255,255,255,0.9)_82%,rgba(255,255,255,1)_100%)]" />
@@ -60,8 +60,8 @@ export default function EssayPage() {
                     <cite className="mt-3 text-sm md:text-base text-black/55">
                       <div> - Stephen Hawking</div>
                     </cite>
-                  </div>
-                </div>
+              </div>
+            </div>
                 <p className="text-neutral-500 leading-7">
                   With that caveat in mind, let's start with a simple question:
                 </p>
@@ -95,8 +95,8 @@ export default function EssayPage() {
                 </p>
                 <p className="text-neutral-500 leading-7">
                   What follows examines the constraints that prevent technology transfer from working as intended—and outlines why unbundling the system makes this version of a TTO not only plausible, but inevitable.
-                </p>
-          </div>
+          </p>
+        </div>
         </section>
 
             {/* Three references */}
@@ -126,8 +126,8 @@ export default function EssayPage() {
                 </p>
                 <p className="text-neutral-500 leading-7">
                   If you see references to a bundled coffee shop or leaky pipes, that's where they come from.
-                </p>
-          </div>
+              </p>
+            </div>
         </section>
 
             {/* Introduction */}
@@ -168,7 +168,7 @@ export default function EssayPage() {
                     <li>Industry sees slow negotiation and unclear ownership</li>
                     <li>Policymakers see weak outputs</li>
                     <li>VCs see friction, confusing terms, and often—yes—greed</li>
-                  </ul>
+            </ul>
                   <p className="text-neutral-500 leading-7">
                     The list goes on.
               </p>
@@ -481,7 +481,7 @@ export default function EssayPage() {
                 <ul className="list-disc pl-6 text-neutral-500 leading-7 space-y-2">
                   <li>"How many active cases should a licensing staff handle?"</li>
                   <li>"How many licenses should a licensing staff execute per year?"</li>
-                </ul>
+            </ul>
                 <p className="text-neutral-500 leading-7">
                   This change in metric changes the culture to be deal focused and not "economic development".
                 </p>
@@ -644,14 +644,14 @@ export default function EssayPage() {
                   <li>complex negotiation</li>
                   <li>portfolio strategy</li>
                 </ul>
-            </div>
-            </section>
+          </div>
+        </section>
 
             {/* What is needed: ttOS */}
             <section id="ttos" className="mb-8">
-              <div className="mb-8 flex items-center gap-4">
+          <div className="mb-8 flex items-center gap-4">
                 <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">What is needed: <br/> a technology transfer operating system (ttOS)</h2>
-              </div>
+          </div>
               <div className="max-w-none">
                 <p className="text-neutral-500 leading-7">
                   What I'm proposing is a technology transfer operating system: ttOS.
@@ -673,13 +673,13 @@ export default function EssayPage() {
                     <div>Dashboards: inventor view + case view; fewer "where is this?" emails</div>
                     <div className="mt-4 rounded-lg border-2 border-dashed border-neutral-300 bg-neutral-50 p-8 text-center text-sm text-neutral-400">
                       [Visual placeholder: Dashboard mockup]
-          </div>
+            </div>
                   </li>
                   <li>
                     <div>Automatic CRM: the work generates the record; no manual updating after the fact</div>
                     <div className="mt-4 rounded-lg border-2 border-dashed border-neutral-300 bg-neutral-50 p-8 text-center text-sm text-neutral-400">
                       [Visual placeholder: Automatic CRM flow diagram]
-          </div>
+            </div>
                   </li>
                   <li>
                     <div>Signature routing: rules + timeouts + escalation; make bottlenecks visible instead of hidden</div>
@@ -712,8 +712,8 @@ export default function EssayPage() {
             </div>
                   </li>
                 </ol>
-            </div>
-            </section>
+          </div>
+        </section>
 
             {/* Conclusion */}
             <section id="conclusion" className="mb-8">

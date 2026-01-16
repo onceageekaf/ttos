@@ -17,27 +17,27 @@ const STAGES: StageKey[] = ["evaluation", "protection", "marketing", "licensing"
 
 const PILLS: Record<StageKey, { key: PillKey; label: string }[]> = {
   evaluation: [
-    { key: "evaluation:1", label: "Due dili…" },
+    { key: "evaluation:1", label: "Due diligence" },
     { key: "evaluation:2", label: "Prior art" },
-    { key: "evaluation:3", label: "Market …" },
-    { key: "evaluation:4", label: "Financi…" },
+    { key: "evaluation:3", label: "Market research" },
+    { key: "evaluation:4", label: "Financial analysis" },
   ],
   protection: [
-    { key: "protection:1", label: "Provisio…" },
-    { key: "protection:2", label: "Patent …" },
-    { key: "protection:3", label: "Invento…" },
-    { key: "protection:4", label: "Filing d…" },
+    { key: "protection:1", label: "Provisional patent" },
+    { key: "protection:2", label: "Patent draft" },
+    { key: "protection:3", label: "Inventor review" },
+    { key: "protection:4", label: "Filing documents" },
   ],
   marketing: [
-    { key: "marketing:1", label: "Inventio…" },
-    { key: "marketing:2", label: "Campai…" },
-    { key: "marketing:3", label: "Deal Mo…" },
-    { key: "marketing:4", label: "Data ro…" },
+    { key: "marketing:1", label: "Invention webpage" },
+    { key: "marketing:2", label: "Campaign" },
+    { key: "marketing:3", label: "Deal room" },
+    { key: "marketing:4", label: "Data room" },
   ],
   licensing: [
     { key: "licensing:1", label: "Strategy" },
-    { key: "licensing:2", label: "Tech dil…" },
-    { key: "licensing:3", label: "Negotia…" },
+    { key: "licensing:2", label: "Tech diligence" },
+    { key: "licensing:3", label: "Negotiation" },
     { key: "licensing:4", label: "Execution" },
   ],
 }
@@ -111,47 +111,39 @@ export default function PipelineProgress({
         ))}
       </div>
 
-      {/* PILLS — STRUCTURE UNCHANGED, COLORS ONLY */}
-      <div className="grid grid-cols-4 ">
-        {STAGES.map((s) => (
-          <div key={s} className="border-r border-black/5 last:border-r-0 p-3">
-            <div className="grid grid-cols-2 gap-2">
-              {PILLS[s].map((p) => {
-                const state = pillState[p.key]
-                const isActiveStage = s === activeStage
+      {/* PILLS — ONE ROW OF 4 PILLS FOR ACTIVE STAGE */}
+      <div className="grid grid-cols-4 gap-3 p-3">
+        {PILLS[activeStage].map((p) => {
+          const state = pillState[p.key]
 
-                return (
-                  <div
-                    key={p.key}
-                    className={cn(
-                      "h-7 rounded-full border px-2.5",
-                      "inline-flex items-center gap-2",
-                      "text-[12px] font-medium transition-colors",
-                      "elevation-sm",
-                      // BASE (unchanged)
-                      "border-black/10 bg-black/[0.02] text-black/55",
-                      // ACTIVE COLORS (only add)
-                      isActiveStage && state === "spinning" && "bg-amber-500/10 border-black/10 text-black",
-                      isActiveStage && state === "done" && "bg-emerald-500/10 border-black/10 text-black",
-                      !isActiveStage && "opacity-80"
-                    )}
-                  >
-                    <span className="inline-flex h-4 w-4 items-center justify-center">
-                      {state === "spinning" ? (
-                        <Loader2 className="h-3.5 w-3.5 text-amber-600 animate-spin" />
-                      ) : state === "done" ? (
-                        <Check className="h-3.5 w-3.5 text-emerald-600" />
-                      ) : (
-                        <span className="h-3.5 w-3.5 rounded-full border border-black/20" />
-                      )}
-                    </span>
-                    <span className="truncate">{p.label}</span>
-                  </div>
-                )
-              })}
+          return (
+            <div
+              key={p.key}
+              className={cn(
+                "h-7 rounded-full border px-2.5",
+                "inline-flex items-center gap-2",
+                "text-[12px] font-medium transition-colors",
+                "elevation-sm",
+                // BASE
+                "border-black/10 bg-black/[0.02] text-black/55",
+                // ACTIVE COLORS
+                state === "spinning" && "bg-amber-500/10 border-black/10 text-black",
+                state === "done" && "bg-emerald-500/10 border-black/10 text-black"
+              )}
+            >
+              <span className="inline-flex h-4 w-4 items-center justify-center">
+                {state === "spinning" ? (
+                  <Loader2 className="h-3.5 w-3.5 text-amber-600 animate-spin" />
+                ) : state === "done" ? (
+                  <Check className="h-3.5 w-3.5 text-emerald-600" />
+                ) : (
+                  <span className="h-3.5 w-3.5 rounded-full border border-black/20" />
+                )}
+              </span>
+              <span className="whitespace-nowrap">{p.label}</span>
             </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </div>
   )

@@ -1,5 +1,26 @@
 import Link from "next/link";
-import { ExternalLink } from "lucide-react";
+import { 
+  ExternalLink,
+  FileText,
+  ClipboardList,
+  ShieldPlus,
+  Globe,
+  ReceiptText,
+  User,
+  Tag,
+  BadgeCheck,
+  Search,
+  ScanSearch,
+  Send,
+  FolderLock,
+  Handshake,
+  CalendarClock,
+} from "lucide-react";
+import InventorDashboard from "@/components/sections/Dashboard/Inventor";
+import CaseView from "@/components/sections/Dashboard/CaseView";
+import DashboardShell from "@/components/sections/Dashboard/layout/DashboardShell";
+import WorkflowHeroLayout from "@/components/sections/WorkflowHero/WorkflowHeroLayout";
+import type { ModuleCardItem } from "@/components/sections/WorkflowHero/ModuleCard";
 
 type TocItem = { id: string; label: string; depth: 2 | 3 };
 
@@ -18,7 +39,7 @@ const TOC: TocItem[] = [
   { id: "ai-infrastructure", label: "AI as infrastructure", depth: 2 },
   { id: "ttos", label: "What is needed: ttOS", depth: 3 },
   { id: "conclusion", label: "Conclusion", depth: 2 },
-  
+
 ];
 
 function clsx(...s: Array<string | false | null | undefined>) {
@@ -136,7 +157,7 @@ export default function Page() {
           <section className="mt-10">
             <AnchorHeading id="perfect-tto" as="h2" className="text-xl font-medium text-neutral-900">
               What is a perfect TTO?
-            </AnchorHeading>
+              </AnchorHeading>
             <div className="relative my-8">
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0)_35%,rgba(255,255,255,0.9)_82%,rgba(255,255,255,1)_100%)]" />
               <div className="relative z-10 mx-auto max-w-[860px] text-center">
@@ -205,7 +226,7 @@ export default function Page() {
           <section className="mt-10">
             <AnchorHeading id="introduction" as="h2" className="text-xl font-medium text-neutral-900">
               Introduction
-            </AnchorHeading>
+              </AnchorHeading>
             <p className="mt-3 leading-7 text-neutral-500">
               If you replace "university" for "technology transfer" in Ben's essay, the logic holds perfectly. The TTO problem fits thematically with the larger proposal of unbundling the university.
             </p>
@@ -256,7 +277,7 @@ export default function Page() {
           <section className="mt-10">
             <AnchorHeading id="systemic-failures" as="h2" className="text-xl font-medium text-neutral-900">
               The four systemic failures inside a TTO
-            </AnchorHeading>
+              </AnchorHeading>
             <p className="mt-3 leading-7 text-neutral-500">
               There are four fundamental systemic failures in most TTO setups today:
             </p>
@@ -329,7 +350,7 @@ export default function Page() {
           <section className="mt-10">
             <AnchorHeading id="size-matters" as="h2" className="text-xl font-medium text-neutral-900">
               Size matters
-            </AnchorHeading>
+              </AnchorHeading>
             <p className="mt-3 leading-7 text-neutral-500">
               Let's do a rough segmentation of TTOs by size:
             </p>
@@ -351,7 +372,7 @@ export default function Page() {
                   <div className="mt-3 text-sm text-black/60">{x.note}</div>
                 </div>
               ))}
-            </div>
+        </div>
             
           </section>
 
@@ -364,7 +385,7 @@ export default function Page() {
               MIT's Technology Licensing Office (TLO) is a great example of the volume, sizing and publicly available report.
             </p>
             {/* MIT metrics */}
-            <div className="mt-6 mb-8 rounded-2xl border border-black/10 bg-white p-5 elevation-md">
+            <div className="mt-6 mb-8 rounded-2xl border border-black/10 bg-white p-5 elevation-sm w-fit">
               <div>
                 <div className="text-sm font-semibold text-black">MIT TLO</div>
                 <div className="text-xs text-black/50 mt-1 flex items-center gap-1.5 flex-wrap">
@@ -390,14 +411,14 @@ export default function Page() {
                 </div>
               </div>
 
-              <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-4">
+              <div className="mt-5 flex flex-wrap gap-3">
                 {[
                   { k: "Invention disclosures", v: "684" },
                   { k: "New patents filed", v: "623" },
                   { k: "Licenses and Options", v: "137" },
                   { k: "Technologies available", v: "2,849" },
                 ].map((m) => (
-                  <div key={m.k} className="rounded-xl border border-black/10 bg-neutral-50 p-3 flex flex-col justify-between min-h-[70px] elevation-md text-center">
+                  <div key={m.k} className="rounded-xl border border-black/10 bg-neutral-50 p-3 flex flex-col justify-between min-h-[70px] elevation-sm text-center w-fit min-w-[140px]">
                     <div className="text-[11px] leading-4 text-black/50">{m.k}</div>
                     <div className="text-lg font-semibold text-black">{m.v}</div>
                   </div>
@@ -406,14 +427,14 @@ export default function Page() {
 
               <div className="mt-5">
                 <div className="text-sm font-semibold text-black mb-3">MIT TLO Team</div>
-                <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+                <div className="flex flex-wrap gap-3">
                   {[
                     { k: "Total Staff", v: "49" },
                     { k: "Senior leadership", v: "5" },
                     { k: "Licensing team", v: "16" },
                     { k: "Admin and support", v: "28" },
                   ].map((m) => (
-                    <div key={m.k} className="rounded-xl border border-black/10 bg-neutral-50 p-3 flex flex-col justify-between min-h-[70px] elevation-md text-center">
+                    <div key={m.k} className="rounded-xl border border-black/10 bg-neutral-50 p-3 flex flex-col justify-between min-h-[70px] elevation-sm text-center w-fit min-w-[140px]">
                       <div className="text-[11px] leading-4 text-black/50">{m.k}</div>
                       <div className="text-lg font-semibold text-black">{m.v}</div>
                     </div>
@@ -421,8 +442,8 @@ export default function Page() {
                 </div>
               </div>
 
-              <div className="mt-5 rounded-xl border border-black/10 bg-neutral-50 p-4 elevation-md">
-                <div className="text-xs font-medium text-black/60">Volume data - 2020 to 2025</div>
+              <div className="mt-5 rounded-xl border border-black/10 bg-neutral-50 p-4 elevation-sm w-full">
+                <div className="text-xs font-medium text-black/60 mb-3">Volume data - 2020 to 2025</div>
 
                 {/* Graph */}
                 <div className="space-y-4">
@@ -435,18 +456,16 @@ export default function Page() {
                     
                     return (
                       <div key={item.label} className="flex items-center gap-4">
-                        <div className="w-40 text-xs font-semibold text-black/70 flex-shrink-0">
+                        <div className="text-xs font-semibold text-black/70 flex-shrink-0 w-fit">
                           {item.label}
                         </div>
-                        <div className="flex-1 flex items-center relative">
-                          <div className="flex-1 flex items-center">
-                            <div
-                              className="h-8 bg-neutral-200 border border-black/10"
-                              style={{ width: `${historicalWidth}%` }}
-                            />
-                            <div className="text-xs font-semibold text-black/70 ml-2">
-                              {(item.historical + item.fy2025).toLocaleString()}
-                            </div>
+                        <div className="flex-1 flex items-center gap-2">
+                          <div
+                            className="h-8 bg-neutral-200 border border-black/10 flex-shrink-0"
+                            style={{ width: `${historicalWidth}%` }}
+                          />
+                          <div className="text-xs font-semibold text-black/70 whitespace-nowrap">
+                            {(item.historical + item.fy2025).toLocaleString()}
                           </div>
                         </div>
                       </div>
@@ -708,14 +727,89 @@ export default function Page() {
             <ol className="list-decimal pl-6 text-neutral-500 leading-7 space-y-6">
               <li>
                 <div>Core automation modules: Disclosure, Evaluation, Protection, Marketing, and Licensing</div>
-                <div className="mt-4 rounded-lg border-2 border-dashed border-neutral-300 bg-neutral-50 p-8 text-center text-sm text-neutral-400">
-                  [Visual placeholder: Core automation modules diagram]
+                <div className="mt-4 mb-0">
+                  <WorkflowHeroLayout
+                    cards={[
+                      {
+                        key: "disclosure",
+                        title: "Disclosure",
+                        icon: <FileText className="h-4 w-4 text-white" />,
+                        items: [
+                          { label: "Structured intake forms", itemIcon: <FileText /> },
+                          { label: "Auto-fill from documents", itemIcon: <User /> },
+                          { label: "Chatbot assistance", itemIcon: <Tag /> },
+                        ],
+                        footer: { label: "+ more attributes" },
+                      },
+                      {
+                        key: "evaluation",
+                        title: "Evaluation",
+                        icon: <ClipboardList className="h-4 w-4 text-white" />,
+                        items: [
+                          { label: "Due diligence workflows", itemIcon: <BadgeCheck /> },
+                          { label: "Prior art analysis", itemIcon: <Search /> },
+                          { label: "Market research", itemIcon: <ScanSearch /> },
+                        ],
+                        footer: { label: "+ more attributes" },
+                      },
+                      {
+                        key: "protection",
+                        title: "Protection",
+                        icon: <ShieldPlus className="h-4 w-4 text-white" />,
+                        items: [
+                          { label: "Patent strategy", itemIcon: <Send /> },
+                          { label: "Attorney handoff", itemIcon: <FileText /> },
+                          { label: "Docket management", itemIcon: <User /> },
+                        ],
+                        footer: { label: "+ more attributes" },
+                      },
+                      {
+                        key: "marketing",
+                        title: "Marketing",
+                        icon: <Globe className="h-4 w-4 text-white" />,
+                        items: [
+                          { label: "Invention webpages", itemIcon: <Globe /> },
+                          { label: "Contact lists", itemIcon: <FolderLock /> },
+                          { label: "Data room", itemIcon: <FileText /> },
+                        ],
+                        footer: { label: "+ more attributes" },
+                      },
+                      {
+                        key: "licensing",
+                        title: "Licensing",
+                        icon: <ReceiptText className="h-4 w-4 text-white" />,
+                        items: [
+                          { label: "Term sheets", itemIcon: <ReceiptText /> },
+                          { label: "Agreement tracking", itemIcon: <Handshake /> },
+                          { label: "Post-agreement follow-up", itemIcon: <CalendarClock /> },
+                        ],
+                        footer: { label: "+ more attributes" },
+                      },
+                    ]}
+                    compactCards={true}
+                    className="mt-0"
+                  />
                 </div>
               </li>
               <li>
                 <div>Dashboards: inventor view + case view; fewer "where is this?" emails</div>
-                <div className="mt-4 rounded-lg border-2 border-dashed border-neutral-300 bg-neutral-50 p-8 text-center text-sm text-neutral-400">
-                  [Visual placeholder: Dashboard mockup]
+                <div className="mt-4 space-y-8">
+                  <div>
+                    <div className="mb-2 text-sm font-medium text-neutral-700">Inventor View</div>
+                    <div className="w-[950px] overflow-visible -ml-4 sm:-ml-6 lg:-ml-8">
+                      <DashboardShell variant="inventor" width="full">
+                        <InventorDashboard />
+                      </DashboardShell>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="mb-2 text-sm font-medium text-neutral-700">Case View</div>
+                    <div className="w-[1000px] overflow-visible -ml-4 sm:-ml-6 lg:-ml-8">
+                      <DashboardShell variant="case" width="full">
+                        <CaseView />
+                      </DashboardShell>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li>

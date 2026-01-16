@@ -100,10 +100,10 @@ export default function WorkflowConnectors({
     // DESKTOP layout (your current grid)
     // Fix: disclosure → evaluation should land on evaluation LEFT (not RIGHT)
     return [
-      { from: { id: "disclosure", port: "bottom" }, to: { id: "evaluation", port: "left" } },
+      { from: { id: "disclosure", port: "right" }, to: { id: "evaluation", port: "left" } },
       { from: { id: "evaluation", port: "right" }, to: { id: "protection", port: "left" } },
-      { from: { id: "protection", port: "right" }, to: { id: "marketing", port: "left" } },
-      { from: { id: "marketing", port: "right" }, to: { id: "licensing", port: "bottom" } },
+      { from: { id: "protection", port: "bottom" }, to: { id: "marketing", port: "right" } },
+      { from: { id: "marketing", port: "left" }, to: { id: "licensing", port: "right" } },
     ];
   }, [mode]);
 

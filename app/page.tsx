@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import CountryFlag from "@/components/elements/CountryFlag"
 
 export const metadata: Metadata = {
   title: "In Pursuit of a Perfect TTO | ttOS",
@@ -55,6 +56,7 @@ const references = [
 const regions = [
   {
     name: "United States",
+    country: "us" as const,
     subtitle: "Mature ecosystem",
     percentage: 70,
     description: "Robust TTO network",
@@ -65,6 +67,7 @@ const regions = [
   },
   {
     name: "United Kingdom",
+    country: "gb" as const,
     subtitle: "Concentrated excellence",
     percentage: 55,
     stat: "£287M Intellectual Property income (2022-23)",
@@ -76,6 +79,7 @@ const regions = [
   },
   {
     name: "Europe",
+    country: "ch" as const,
     subtitle: "Fragmented",
     percentage: 45,
     description: "World-class research",
@@ -86,6 +90,7 @@ const regions = [
   },
   {
     name: "Asia-Pacific",
+    country: "jp" as const,
     subtitle: "Rapidly growing",
     percentage: 35,
     stat: "China now leads in research output",
@@ -95,6 +100,7 @@ const regions = [
   },
   {
     name: "Global South",
+    country: "ca" as const,
     subtitle: "Critical gap",
     percentage: 15,
     description: "Minimal TTO infrastructure",
@@ -284,7 +290,10 @@ export default function GlobalPaperStandalonePage() {
                 {regions.map((region) => (
                   <div key={region.name} className="flex gap-4 items-start">
                     <div className="w-28 flex-shrink-0">
-                      <p className="font-medium text-neutral-900">{region.name}</p>
+                      <div className="flex items-center gap-2 mb-1">
+                        <CountryFlag country={region.country} size="sm" />
+                        <p className="font-medium text-neutral-900">{region.name}</p>
+                      </div>
                       <p className="text-xs text-neutral-400">{region.subtitle}</p>
                     </div>
                     <div className="flex-1">
