@@ -79,7 +79,7 @@ const regions = [
   },
   {
     name: "Europe",
-    country: "ch" as const,
+    country: "eu" as const,
     subtitle: "Fragmented",
     percentage: 45,
     description: "World-class research",
